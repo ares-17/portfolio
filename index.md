@@ -50,13 +50,11 @@ html.dark div.VPContent:has(div.VPHome) {
   animation: fade-in-normal 0.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) 0ms 1 normal none; 
 }
 
-/* Immagine profilo */
 .profile-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 
 div.VPHero.VPHomeHero{
   order: 2;
@@ -77,9 +75,6 @@ div.VPHome {
   flex-direction: column;
 }
 
-h1 span .name.clip {
-  
-}
 </style>
 
 <div class="profile-container">
