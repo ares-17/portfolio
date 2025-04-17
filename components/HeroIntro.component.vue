@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 
 const { isDark } = useData()
+console.log(isDark.value)
 </script>
 
 <template>
@@ -9,9 +10,9 @@ const { isDark } = useData()
         <div class="content">
             <h1>
                 <span class="name clip">Alessandro</span><br />
-                <span class="headline" v-bind:class="{ 'white-theme': !isDark }">Building bridges<br />between code and<br />infrastructure</span>
+                <span class="headline" v-bind:class="{ 'dark-theme': !!isDark }">Building bridges<br />between code and<br />infrastructure</span>
             </h1>
-            <p class="roles" v-bind:class="{ 'white-theme': !isDark }">
+            <p class="roles" v-bind:class="{ 'dark-theme': !!isDark }">
                 DevOps <span class="divider">|</span>
                 Home Lab Architect <span class="divider">|</span>
                 AI Tinkerer
@@ -55,15 +56,15 @@ const { isDark } = useData()
 .headline {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
-    color: #e5e5e5;
+    color: #4a4a4a;
     line-height: 1.2;
     margin-top: 1rem;
 }
 
-.headline.white-theme{
+.headline.dark-theme{
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
-    color: #4a4a4a;
+    color: #e5e5e5;
     line-height: 1.2;
     margin-top: 1rem;
 }
@@ -71,14 +72,14 @@ const { isDark } = useData()
 /* RUOLI */
 .roles {
     margin: 2rem 0 1.5rem;
-    color: #aaa;
+    color: #4a4a4a;
     font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-weight: 500;
 }
 
-.roles.white-theme {
+.roles.dark-theme {
     margin: 2rem 0 1.5rem;
-    color: #4a4a4a;
+    color: #aaa;
     font-size: clamp(1.2rem, 3vw, 1.6rem);
     font-weight: 500;
 }
