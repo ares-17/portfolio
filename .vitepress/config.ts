@@ -10,7 +10,11 @@ export default defineConfig({
       lazyLoading: true
     }
   },
+  head: [
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "folder.webp"}],
+  ],
   themeConfig: {
+    logo: 'folder.webp',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
