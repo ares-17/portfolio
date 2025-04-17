@@ -1,8 +1,15 @@
 <script setup>
+import { ref, onMounted, watchEffect } from 'vue'
 import { useData } from 'vitepress'
 
 const { isDark } = useData()
-console.log(isDark.value)
+const darkClass = ref(false)
+
+onMounted(() => {
+  watchEffect(() => {
+    darkClass.value = isDark.value
+  })
+})
 </script>
 
 <template>
@@ -10,7 +17,9 @@ console.log(isDark.value)
         <div class="content">
             <h1>
                 <span class="name clip">Alessandro</span><br />
-                <span class="headline" v-bind:class="{ 'dark-theme': !!isDark }">Building bridges<br />between code and<br />infrastructure</span>
+                <span class="headline" :class="{ 'dark-theme': darkClass }">
+                    Building bridges<br />between code and<br />infrastructure
+                </span>
             </h1>
             <p class="roles" v-bind:class="{ 'dark-theme': !!isDark }">
                 DevOps <span class="divider">|</span>
@@ -18,7 +27,8 @@ console.log(isDark.value)
                 AI Tinkerer
             </p>
             <div class="buttons">
-                <a href="https://www.linkedin.com/in/alessandro-schiavo-50630b183/" target="_blank" class="btn linkedin">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/alessandro-schiavo-50630b183/" target="_blank"
+                    class="btn linkedin">LinkedIn</a>
                 <a href="https://github.com/ares-17" target="_blank" class="btn github">View GitHub</a>
             </div>
         </div>
@@ -61,7 +71,7 @@ console.log(isDark.value)
     margin-top: 1rem;
 }
 
-.headline.dark-theme{
+.headline.dark-theme {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
     color: #e5e5e5;
