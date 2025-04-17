@@ -1,25 +1,22 @@
 ---
 layout: home
 title: Alessandro - DevOps & Open Source Enthusiast
-hero:
-  name: Alessandro
-  text: Building bridges between code and infrastructure
-  tagline: DevOps | Home Lab Architect | AI Tinkerer
-  image:
-  actions:
-    - theme: brand
-      text: LinkedIn
-      link: https://www.linkedin.com/in/alessandro-schiavo-50630b183/
-    - theme: alt
-      text: View GitHub
-      link: https://github.com/ares-17
 ---
 
 <script setup>
 import ProfileImages from './components/ProfileImages.component.vue'
+import FeatureCard from './components/FeatureCard.component.vue'
+import HeroIntro from './components/HeroIntro.component.vue'
 </script>
 
 <ProfileImages/>
+<HeroIntro />
+<FeatureCard imgSrc="trasport-image-card.webp" imgAlt="Fast Development">
+  <h2>Freight Transport Data 🚌</h2>
+  <p>Il progetto è frutto di uno studio delle caratteristiche dei dati geospaziali e temporali raccolti del flusso stradale su alcune delle città del territorio olandese.
+    Le funzionalità come ricerca e analisi dati sono raccolte in unico Jupyter Notebook che sfrutta appieno le capacità offerte da Neo4J e MongoDB.</p>
+  <a href="https://github.com/ares-17/freight-transport-data" target="_blank">Visita su Github ➜</a>
+</FeatureCard>
 
 <style>
 
@@ -47,6 +44,19 @@ div.VPHome {
   display: flex;
   justify-content: left;
   flex-direction: column;
+}
+
+div.VPFeatures.VPHomeFeatures{
+  order: 3;
+}
+
+div.feature-card{
+  order: 0;
+}
+
+.vp-doc h2 {
+    border: none;
+    padding-top: 0;
 }
 
 </style>
