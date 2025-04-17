@@ -63,7 +63,6 @@ div.VPHero.VPHomeHero{
 }
 
 div.vp-doc.container{
-  orer: 1;
   justify-content: left;
   display: flex;
   margin-top: 3rem;
