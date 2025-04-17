@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Marco Rossi - DevOps & Open Source Enthusiast
+title: Alessandro - DevOps & Open Source Enthusiast
 hero:
   name: Alessandro
   text: Building bridges between code and infrastructure
@@ -8,8 +8,8 @@ hero:
   image:
   actions:
     - theme: brand
-      text: Download CV
-      link: /cv/MarcoRossi-CV.pdf
+      text: LinkedIn
+      link: https://www.linkedin.com/in/alessandro-schiavo-50630b183/
     - theme: alt
       text: View GitHub
       link: https://github.com/ares-17
@@ -18,11 +18,11 @@ hero:
 <style>
 
 html:not(.dark) div.VPContent:has(div.VPHome) {
-  background: radial-gradient(circle at left, rgba(255, 255, 255, 1) , rgba(92, 115, 231, 0.6))
+  background: radial-gradient(circle at left, rgba(255, 255, 255, 1) , rgba(92, 115, 231, 0.4))
 }
 
 html.dark div.VPContent:has(div.VPHome) {
-  background: radial-gradient(circle at left, #000 , rgba(92, 115, 231, 0.6))
+  background: radial-gradient(circle at left, #000 , rgba(92, 115, 231, 0.4))
 }
   
 :root {
