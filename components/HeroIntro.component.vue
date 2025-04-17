@@ -1,7 +1,9 @@
 <script setup>
 import { ref, onMounted, watchEffect } from 'vue'
 import { useData } from 'vitepress'
+import { useI18n } from '../composables/useI18n'
 
+const t = useI18n()
 const { isDark } = useData()
 const darkClass = ref(false)
 
@@ -18,18 +20,18 @@ onMounted(() => {
             <h1>
                 <span class="name clip">Alessandro</span><br />
                 <span class="headline" :class="{ 'dark-theme': darkClass }">
-                    Building bridges<br />between code and<br />infrastructure
+                    {{ t.hero.headline.description }}
                 </span>
             </h1>
             <p class="roles" v-bind:class="{ 'dark-theme': !!isDark }">
-                DevOps <span class="divider">|</span>
-                Home Lab Architect <span class="divider">|</span>
-                AI Tinkerer
+                {{ t.hero.role1 }} <span class="divider">|</span>
+                {{ t.hero.role2 }} <span class="divider">|</span>
+                {{ t.hero.role3 }}
             </p>
             <div class="buttons">
                 <a href="https://www.linkedin.com/in/alessandro-schiavo-50630b183/" target="_blank"
-                    class="btn linkedin">LinkedIn</a>
-                <a href="https://github.com/ares-17" target="_blank" class="btn github">View GitHub</a>
+                    class="btn linkedin">{{ t.hero.actions.primary }}</a>
+                <a href="https://github.com/ares-17" target="_blank" class="btn github">{{ t.hero.actions.secondary }}</a>
             </div>
         </div>
     </section>

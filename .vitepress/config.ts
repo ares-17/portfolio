@@ -34,5 +34,9 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ares-17' }
     ]
+  },
+  locales: {
+    root: { label: 'Italiano', lang: 'it' },
+    en: { label: 'English', lang: 'en' }
   }
 })

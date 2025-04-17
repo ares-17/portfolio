@@ -7,15 +7,17 @@ title: Alessandro - DevOps & Open Source Enthusiast
 import ProfileImages from './components/ProfileImages.component.vue'
 import FeatureCard from './components/FeatureCard.component.vue'
 import HeroIntro from './components/HeroIntro.component.vue'
+import { useI18n } from './composables/useI18n'
+
+const t = useI18n()
 </script>
 
 <ProfileImages/>
 <HeroIntro />
-<FeatureCard imgSrc="trasport-image-card.webp" imgAlt="Fast Development">
-  <h2>Freight Transport Data 🚌</h2>
-  <p>Il progetto è frutto di uno studio delle caratteristiche dei dati geospaziali e temporali raccolti del flusso stradale su alcune delle città del territorio olandese.
-    Le funzionalità come ricerca e analisi dati sono raccolte in unico Jupyter Notebook che sfrutta appieno le capacità offerte da Neo4J e MongoDB.</p>
-  <a href="https://github.com/ares-17/freight-transport-data" target="_blank">Visita su Github ➜</a>
+<FeatureCard imgSrc="trasport-image-card.webp" imgAlt="trasport-image-card">
+  <h2>{{ t.home.cards.transport.title }}</h2>
+  <p>{{ t.home.cards.transport.description }}</p>
+  <a href="https://github.com/ares-17/freight-transport-data" target="_blank">{{ t.home.cards.transport.link }} ➜</a>
 </FeatureCard>
 
 <style>

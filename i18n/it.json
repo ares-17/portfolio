@@ -1,0 +1,23 @@
+{
+    "home": {
+        "cards": {
+            "transport": {
+                "title": "Freight Transport Data ",
+                "description": "Il progetto è frutto di uno studio delle caratteristiche dei dati geospaziali e temporali raccolti del flusso stradale su alcune delle città del territorio olandese. Le funzionalità come ricerca e analisi dati sono raccolte in unico Jupyter Notebook che sfrutta appieno le capacità offerte da Neo4J e MongoDB.",
+                "link": "Visita su Github"
+            }
+        }
+    },
+    "hero": {
+        "headline": {
+            "description": "Building bridges between code and infrastructure"
+        },
+        "role1": "DevOps",
+        "role2": "Home Lab Architect",
+        "role3": "AI Tinkerer",
+        "actions": {
+            "primary": "LinkedIn",
+            "secondary": "Vediamoci su GitHub"
+        }
+    }
+}
