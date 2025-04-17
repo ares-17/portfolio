@@ -15,6 +15,12 @@ hero:
       link: https://github.com/ares-17
 ---
 
+<script setup>
+import ProfileImages from './components/ProfileImages.component.vue'
+</script>
+
+<ProfileImages/>
+
 <style>
 
 html:not(.dark) div.VPContent:has(div.VPHome) {
@@ -26,46 +32,15 @@ html.dark div.VPContent:has(div.VPHome) {
 }
   
 :root {
-  /* Nuove variabili CSS personalizzate */
   --profile-size: 100px;
   --profile-border: 4px;
   --vp-home-hero-name-color: rgba(92, 115, 231, 1);
-}
-
-/* Container immagine circolare */
-.profile-container {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto 2rem;
-  width: var(--profile-size);
-  height: var(--profile-size);
-  border-radius: 50%;
-  border: var(--profile-border) solid var(--vp-c-brand);
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,1,1,0.4);
-}
-
-@keyframes fade-in-normal {0% { opacity: 0; } 100% { opacity: 1;} }
-.profile-container {
-  animation: fade-in-normal 0.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) 0ms 1 normal none; 
-}
-
-.profile-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 div.VPHero.VPHomeHero{
   order: 2;
   margin-top: 0;
   padding-top: 0;
-}
-
-div.vp-doc.container{
-  justify-content: left;
-  display: flex;
-  margin-top: 3rem;
 }
 
 div.VPHome {
@@ -75,12 +50,3 @@ div.VPHome {
 }
 
 </style>
-
-<div class="profile-container">
-  <img 
-    class="profile-image" 
-    src="/ares-image.webp" 
-    alt="Alessandro Profile Picture"
-    loading="lazy"
-  >
-</div>

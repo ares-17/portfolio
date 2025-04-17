@@ -5,7 +5,7 @@ import { pipeline } from 'stream/promises';
 
 const GITHUB_USERNAME = 'ares-17';
 const LINKEDIN_IMG_URL = "https://media.licdn.com/dms/image/v2/D4E03AQHYwKV_jpP0qQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1673978997803?e=1750291200&v=beta&t=Cupgwe8IG7qD9z8Sioxveuga1lshNPMf4jMZKtvNM5I"
-const MAX_RES = 150;
+const MAX_RES = 100;
 const OUTPUT_DIR = path.resolve('public');
 
 async function toWebPFromUrl(imageUrl, outputPath) {

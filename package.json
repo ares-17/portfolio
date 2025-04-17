@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview",
-    "fetch:profile-images": "node scripts/download_profile_images.js"
+    "fetch:profile-images": "node scripts/download_profile_images.js",
+    "build": "npm run fetch:profile-images && vitepress build",
+    "preview": "vitepress preview"
   },
   "keywords": [],
   "author": "",
